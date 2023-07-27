@@ -1,30 +1,50 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="wrapper">
+    <div class="decorBlock">
+
+    </div>
+    <div class="contentBlock">
+      <span class="title">
+        Проведение ТО и мелкий ремонт
+      </span>
+      <nav>
+        <router-link to="/General">Общее</router-link>
+        <router-link to="/">Товар списания</router-link>
+        <router-link to="/AdditionalCosts">Доп. расходы</router-link>
+      </nav>
+      <router-view />
+    </div>
+  </div>
+  
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.wrapper {
+  display: flex;
+  width: 100%;
+  padding: 0 25px 0 0;
+  background-color: #fbfcfd;
+
 }
 
-nav {
-  padding: 30px;
+.decorBlock {
+  width: 229px;
+  height: 100vh;
+  margin: 0 25px 0 0;
+  background: radial-gradient(circle at 29% 0, #000, #1c2734 103%);
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.title {
+  width: 433px;
+  height: 31px;
+  margin: 25px 68px 25px 25px;
+  font-family: MyriadPro;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
 }
 </style>
